@@ -1,21 +1,19 @@
-#ifndef CARD_H
-#define CARD_H
+#pragma once
+#include <string>
 
 class Card 
 {
 public:
-    Card(const char*, unsigned, unsigned);
+    Card(const std::string&, unsigned, unsigned);
 
-    const char* getName() const;
+    const std::string& getName() const;
     unsigned getDamage() const;
     unsigned getHealth() const;
     void takeDamage(int);
 
-private:
-    const char* name;
+protected:
+    std::string name;
     unsigned damage;
     unsigned health;
     bool isAlive;
 };
-
-#endif

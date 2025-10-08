@@ -1,14 +1,16 @@
 #include <iostream> 
-#include "card.h"
+#include <string> 
 #include "utils.h"
+#include "cow.h"
+#include "sheep.h"
 
 int main() 
-{
-    Card cow("cow", 1, 4);
-    Card sheep("sheep", 2, 3);
-
-    std::cout << cow << std::endl;
+{    
+    Sheep sheep{};
     std::cout << sheep << std::endl;
+
+    Cow cow{};
+    std::cout << cow << std::endl;
 
     cardToCardAttack(sheep, cow); 
     

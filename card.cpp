@@ -1,14 +1,14 @@
 #include <algorithm>
 #include <iostream>
-
+#include <string>
 #include "card.h"
 
-Card::Card(const char* name, unsigned dmg, unsigned hp)
+Card::Card(const std::string& name, unsigned dmg, unsigned hp)
 : name{name}, damage{dmg}, health{hp}
 {
 }
 
-const char* Card::getName() const
+const std::string& Card::getName() const
 {
     return name;
 }
