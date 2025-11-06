@@ -7,11 +7,12 @@ class Hand
 {
 public:
     template<typename... Cards>
-    Hand(Cards...);
+    Hand(Cards&...);
     size_t getHandSize();
     std::string getHandAsString();
+    std::vector<Card>& getHandAsVector();
 private:
-    std::vector<Card> cards;
+    std::vector<unsigned> cardIds;
 };
 
 #include "hand.tcc"
