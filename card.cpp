@@ -3,9 +3,10 @@
 #include <string>
 #include "card.h"
 
-Card::Card(const std::string& name, unsigned dmg, unsigned hp)
-: name{name}, damage{dmg}, health{hp}
+Card::Card(unsigned id, const std::string& name, unsigned dmg, unsigned hp)
+: id{id}, name{name}, damage{dmg}, health{hp}
 {
+
 }
 
 const std::string& Card::getName() const
@@ -21,6 +22,11 @@ unsigned Card::getDamage() const
 unsigned Card::getHealth() const
 {
     return health;
+}
+
+unsigned Card::getId() const
+{
+    return id;
 }
 
 void Card::takeDamage(int dmg)

@@ -5,5 +5,5 @@
 class Cow : public Card
 {
 public:
-    Cow();
+    Cow(unsigned id);
 };

@@ -1,5 +1,5 @@
 #include "cow.h"
 
-Cow::Cow()
-: Card("Cow", 1, 4)
+Cow::Cow(unsigned id)
+: Card(id, "Cow", 1, 4)
 {}

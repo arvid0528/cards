@@ -2,7 +2,7 @@
 
 std::ostream& operator<<(std::ostream& os, const Card& card)
 {
-    os << card.getName() << "  dmg: " << card.getDamage() << "  hp: " << card.getHealth() << std::endl;
+    os << "id#" << card.getId() << "-" << card.getName() << "-dmg#" << card.getDamage() << "-hp#" << card.getHealth() << std::endl;
     return os;
 }
 

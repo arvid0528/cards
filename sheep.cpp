@@ -1,5 +1,5 @@
 #include "sheep.h"
 
-Sheep::Sheep()
-: Card("Sheep", 2, 3)
+Sheep::Sheep(unsigned id)
+: Card(id, "Sheep", 2, 3)
 {}

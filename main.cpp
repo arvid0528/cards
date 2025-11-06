@@ -3,19 +3,17 @@
 #include "utils.h"
 #include "cow.h"
 #include "sheep.h"
+#include "hand.h"
+#include "cardManager.h"
 
 int main() 
 {    
-    Sheep sheep{};
-    std::cout << sheep << std::endl;
 
-    Cow cow{};
-    std::cout << cow << std::endl;
+    CardManager cm{};
+    Sheep sheep = cm.createCard<Sheep>();
+    Sheep sheep2 = cm.createCard<Sheep>();
 
-    cardToCardAttack(sheep, cow); 
-    
-    std::cout << cow << std::endl;
-    std::cout << sheep << std::endl;
+    std::cout << cm.getCardById(0);
 
     return 0;
 }
